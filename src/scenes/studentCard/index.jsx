@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from '../navbar';
+import { jwtDecode } from 'jwt-decode';
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -11,11 +12,13 @@ const StudentCard = () => {
   const [userData, setUserData] = useState({});
 
   const query = useQuery();
+//   console.log('yaaaa....')
 
   useEffect(() => {
     const type = query.get('type');
-    if (type === 'typical_user') {
-      setIsStudent(true);
+    const data = query.get('data');
+    if (type == 'typical_user') {
+      setIsStudent(false);
       const firstName = query.get('firstName');
       const lastName = query.get('lastName');
       const gender = query.get('gender');
@@ -29,12 +32,14 @@ const StudentCard = () => {
         phone,
         email
       });
-    } else if (type === 'student') {
-      setIsStudent(false);
-      const name = query.get('name');
-      const gender = query.get('gender');
-      const phone_number = query.get('phone_number');
-      const email = query.get('email');
+    } else if (type == 'student') {
+      const decodedData = jwtDecode(data)
+      console.log('big data ',decodedData);
+      setIsStudent(true);
+      const name = decodedData.name;
+      const gender = decodedData.gender;
+      const phone_number = decodedData.phone_number;
+      const email = decodedData.email;
       setUserData({
         name,
         gender,
@@ -42,11 +47,11 @@ const StudentCard = () => {
         email
       });
     }
-  }, [query]);
+  }, []);
 
   return (
     <>
-      <Navbar profileName={isStudent ? userData.fullName : userData.name} />
+      <Navbar profileName={isStudent ? userData.name : userData.fullName} />
       <div className="container">
         <div>
           <h3 style={{ marginLeft: '28px', fontWeight: 'bold' }} className="title-1">Basic Information</h3>
@@ -58,6 +63,16 @@ const StudentCard = () => {
             <tr>
               {isStudent && (
                 <>
+                  <td>Names</td>
+                </>
+              )}
+              {isStudent ? (
+                <>
+                <td>Names</td>
+              </>
+              ) : (
+                
+                <>
                   <td>First name</td>
                   <td>Last name</td>
                 </>
@@ -68,12 +83,13 @@ const StudentCard = () => {
             </tr>
             <tr>
               {isStudent ? (
+                <td>{userData.name}</td>
+              ) : (
+                
                 <>
                   <td>{userData.firstName}</td>
                   <td>{userData.lastName}</td>
                 </>
-              ) : (
-                <td>{userData.name}</td>
               )}
               <td>{userData.gender}</td>
               <td>{userData.email}</td>
@@ -89,7 +105,7 @@ const StudentCard = () => {
         }}
       >
         <h3 style={{ marginLeft: '28px', fontWeight: 'bold', textAlign: 'center' }} className="title-1-1">
-          You have student privilege ...
+          You have {isStudent ? 'student' : 'Typical user'} privileges ...
         </h3>
       </div>
     </>
