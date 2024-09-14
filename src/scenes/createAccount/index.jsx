@@ -60,23 +60,22 @@ const ChooseMethod = ({ setSignupMethod, boboxvalue }) => {
 
   return (
     <>
-      Choose signup method {boboxvalue}
-      <input
-        type="button"
-        value="Sign Up Manually"
-        onClick={() => handleClick('SIGNUP_MANUELY')}
-      />
-      <input
-        type="button"
-        value="Sign Up with Google"
-        onClick={() => handleClick('SIGNUP_GOOGLE')}
-      />
-      <input
-        type="button"
-        value="Sign Up with Esignet"
-        onClick={() => handleESignet1()}
-        // onClick={() => handleClick('SIGNUP_ESIGNET')}
-      />
+       <div className="loginHorder">
+      <div className="loginDiv">
+        <div className="logoDiv">
+          <div className="logo-div" style={{fontSize:'x-large', fontWeight:'bolder',color:'white',padding:'6px'}}>
+            <p style={{textAlign:'center', fontWeight:'bolder'}}>Demo App</p> <p style={{fontSize:'regular', fontSize:'small'}}>Choose way of signing up</p>
+          </div>
+        </div>
+        <div onClick={()=>{handleESignet1()}} for ='eSignet'  className='eSignetButton' style={{backgroundColor:'#F9F9F9', fontWeight:'normal', margin:'10px 20px'}} >
+                 <img src="assets/icons/eSignetIcon.png"  height="30" width="30"  alt=""/> Sign in with eSignet
+        </div>
+        <div onClick={'#'} for ='eSignet'  className='eSignetButton' style={{backgroundColor:'#F9F9F9', fontWeight:'normal', margin:'10px 20px'}} >
+                 <img src="assets/icons/google_login.svg"  height="30" width="30"  alt=""/> Sign in with eSignet
+        </div>
+       
+      </div>
+    </div>
     </>
   );
 };

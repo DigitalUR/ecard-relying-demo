@@ -61,11 +61,7 @@ const StudentCard = () => {
         <table className="table-1">
           <tbody>
             <tr>
-              {isStudent && (
-                <>
-                  <td>Names</td>
-                </>
-              )}
+
               {isStudent ? (
                 <>
                 <td>Names</td>
