@@ -99,12 +99,7 @@ const [gender, setGender] = useState('');
       <div className="loginDiv">
         <div className="logoDiv">
           <div className="logo-div">
-            <img
-              src="assets/University of Rwanda - LOGO LANDSCAPE _RV Official.png"
-              width="105px"
-              height="45px"
-              alt=""
-            />
+          {"<Demo App>"}
           </div>
         </div>
         <div className="form">
