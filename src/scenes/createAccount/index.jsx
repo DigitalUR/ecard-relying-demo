@@ -50,7 +50,7 @@ const ChooseMethod = ({ setSignupMethod, boboxvalue }) => {
         const redirectUri = 'https://ecard-backend.onrender.com/api/oauth2/esignet/callback';
     
         // alert("hello world");
-        window.location.href = `https://esignet.collab.mosip.net/authorize?scope=openid profile&response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&state=https://ecard-mosip.vercel.app/info`;
+        window.location.href = `https://esignet.collab.mosip.net/authorize?scope=openid profile&response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&state=https://ecard-relying-demo.vercel.app/info`;
     
       };
       
