@@ -115,7 +115,7 @@ input[type = 'submit']{
     cursor: pointer;
 }
 
-.action_button, .eSignetButton{
+.action_button{
     background-color: var(--primary-color);
     padding: 5px 20px;
     font-weight: bold;
@@ -136,15 +136,10 @@ input[type = 'submit']{
 .title-1{
     color: var(--primary-color);
 }
-.title-1-1{
-    color: var(--primary-color);
-    /* border: 1px solid red; */
-    width: 100%;
-}
 
 .table-1{
     padding: 10px;
-    width: 100%;
+    width: 90%;
     margin: auto;
     border-collapse: collapse;
     border-top: 1px solid red;
@@ -199,135 +194,4 @@ input[type = 'submit']{
     /* background-color: var(--primary-color); */
     background-color: ghostwhite;
     margin: 5px;
-}
-
-
-a{
-    color: white;
-    padding: 5px;
- 
-}
-
- 
-
-.welcome_svg{
-    width: 60%;
-}
-
-.welcome_div{
-    align-items: center;
-}
-
-.nav-bar{
-    gap: 1vw;
-}
-
-.options i::after{
-    content: '   ';
-    height: 10px;
-    width: 10px;
-    transform: translateX(-5px);
-    position: absolute;
-    top: 30px;
-    background-color: red;
-    border:1px solid red;
-    border-radius: 50%;
-
-}
-
-.nav-2 a{
-    color: rgb(92, 92, 92);
-    
-}
-
-li a{
-    color: beige;
-}
-
-.container div{
-    width: 50%;
-}
-
-.table-1 td{
-    padding: 5px;
-}
-
-.profile_image{
-    border: 2px solid rgba(0, 0, 0, 0.511);
-    box-shadow: 0px 0px 5px grey;
-}
-
-
-.status_div{
-    /* border: 1px solid red; */
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    margin-top: 30px;
-    background-color: rgb(106, 212, 115);
-    border-radius: 5px;
-    box-shadow: 0px 0px 3px grey;
-    color: aliceblue;
-    gap: 20px;
-     
-}
-
-.loginHorder{
-    /* border: 1px solid red; */
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.loginDiv{
-    /* border: 1px solid blue; */
-    width: 35%;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    background-color: var(--gray-1);
-    box-shadow: 1px 1px 1px rgba(23, 23, 37, 0.107);
-    
-}
-.logoDiv{
-    background-color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-    
-
-}
-
-
-.form{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-.form input{
-    padding: 10px;
-    text-align: center;
-}
-
-.eSignetButton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    display: flex;
-    gap: 10px;
-    margin: 0px 4px;
-}
-
-.loginSpan{
-    margin: 12px 4px;
-}
-
-.loginSpan a{
-    margin: 12px 4px;
-    color: var(--primary-color);
 }
