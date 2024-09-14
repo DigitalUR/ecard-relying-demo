@@ -10,7 +10,6 @@ const Login = () => {
 
 
         window.location.href = `https://esignet.collab.mosip.net/authorize?scope=openid profile&response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&state=ecard_request&mbaduko=mbadukostatehere`;
-
       };
     return (
         <>

@@ -2,7 +2,7 @@ const Navbar = ({profileName}) => {
     return ( <>
         <div class="container nav ">
         {/* <div class="logo-div"><img src="../assets/trophy.svg"  width="50px" height="45px" alt=""/></div> */}
-        <div class="logo-div" style={{fontSize:'x-large', fontWeight:'bolder'}}>{"<Demo App>"}</div>
+        <div class="logo-div" style={{fontSize:'x-large', fontWeight:'bolder'}}>{"Demo App"}</div>
         <div class="nav-bar" style={ {display:"flex"}}> 
             <div style={{ padding: 0,  display: 'flex',justifyContent:'end', width: '100%'}}>
             <div class="profile" style={{padding:0, display: 'flex', width: '200px',gap: '10px'}}><i class="fa-solid fa-user"></i><span>{profileName}</span></div></div>

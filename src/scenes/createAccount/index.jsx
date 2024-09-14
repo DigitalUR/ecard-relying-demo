@@ -1,6 +1,17 @@
 import { useState } from "react";
 
 const SignUp = () => {
+
+    const handleESignet = () => {
+        const clientId = 'dghlMHnj837HsU-c-Q2aqrl52fEnGP4uJiZ0K7fLtoc';
+        const redirectUri = 'https://ecard-backend.onrender.com/api/oauth2/esignet/callback';
+
+        // alert("hello world");
+        window.location.href = `https://esignet.collab.mosip.net/authorize?scope=openid profile&response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&state=ecard_request&mbaduko=mbadukostatehere`;
+
+      };
+
+
   const [signupMethod, setSignupMethod] = useState(null);
   const boboxvalue = 'bobox';
 
@@ -31,7 +42,18 @@ const SignUp = () => {
   }
 };
 
+
+
 const ChooseMethod = ({ setSignupMethod, boboxvalue }) => {
+    const handleESignet1 = () => {
+        const clientId = 'dghlMHnj837HsU-c-Q2aqrl52fEnGP4uJiZ0K7fLtoc';
+        const redirectUri = 'https://ecard-backend.onrender.com/api/oauth2/esignet/callback';
+    
+        // alert("hello world");
+        window.location.href = `https://esignet.collab.mosip.net/authorize?scope=openid profile&response_type=code&client_id=${clientId}&redirect_uri=${redirectUri}&state=https://ecard-mosip.vercel.app/info`;
+    
+      };
+      
   const handleClick = (method) => {
     setSignupMethod(method);
   };
@@ -52,7 +74,8 @@ const ChooseMethod = ({ setSignupMethod, boboxvalue }) => {
       <input
         type="button"
         value="Sign Up with Esignet"
-        onClick={() => handleClick('SIGNUP_ESIGNET')}
+        onClick={() => handleESignet1()}
+        // onClick={() => handleClick('SIGNUP_ESIGNET')}
       />
     </>
   );
@@ -98,8 +121,8 @@ const [gender, setGender] = useState('');
     <div className="loginHorder">
       <div className="loginDiv">
         <div className="logoDiv">
-          <div className="logo-div">
-          {"<Demo App>"}
+          <div className="logo-div" style={{fontSize:'x-large', fontWeight:'bolder',color:'white',padding:'6px'}}>
+            Demo App
           </div>
         </div>
         <div className="form">
