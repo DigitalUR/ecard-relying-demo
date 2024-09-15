@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { loginContext } from '../../App';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -16,7 +17,9 @@ const Login = () => {
             <div class="loginHorder">
         <div class="loginDiv">
             <div className="logoDiv">
-            <div class="logo-div"><img src="assets/University of Rwanda - LOGO LANDSCAPE _RV Official.png"  width="105px" height="45px" alt=""/></div>
+            <div className="logo-div" style={{fontSize:'x-large', fontWeight:'bolder',color:'white',padding:'6px'}}>
+            Demo App
+          </div>
             </div>
             <div className="form">
                 <input type="text" placeholder='Reg number ...'/>
@@ -24,11 +27,18 @@ const Login = () => {
                 <input type="submit" style={{fontWeight:'bold'}} value="LOGIN" />
             <span className='loginSpan'>Forgate password ? <a href='#'>Click here</a></span>
                 {/* <input type='hidden' id='eSignet'  value="Signin with eSignet" /> */}
-                 <div onClick={()=>{handleESignet()}} for ='eSignet'  className='eSignetButton' style={{backgroundColor:'#F9F9F9', fontWeight:'normal'}} >
-                 <img src="assets/icons/eSignetIcon.png"  height="30" width="30"  alt=""/> Sign in with eSignet - Academic
+                <div onClick={()=>{handleESignet()}} for ='eSignet'  className='eSignetButton' style={{backgroundColor:'#F9F9F9', fontWeight:'normal'}} >
+                 <img src="assets/icons/google_login.svg"  height="30" width="30"  alt=""/> Sign in with Google
                  </div>
+                 <br />
+                 <div onClick={()=>{handleESignet()}} for ='eSignet'  className='eSignetButton' style={{backgroundColor:'#F9F9F9', fontWeight:'normal'}} >
+                 <img src="assets/icons/eSignetIcon.png"  height="30" width="30"  alt=""/> Sign in with eCard
+                 </div>
+                
+                 
+                 
                 <br />
-            <span className='loginSpan' style={{marginLeft:0}}><a href='#'>Create new account</a></span>
+            <span className='loginSpan' style={{marginLeft:0}}><Link to="/signup">Create new account</Link></span>
             </div>
         </div>
     </div>  

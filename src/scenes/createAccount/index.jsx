@@ -67,11 +67,14 @@ const ChooseMethod = ({ setSignupMethod, boboxvalue }) => {
             <p style={{textAlign:'center', fontWeight:'bolder'}}>Demo App</p> <p style={{fontSize:'regular', fontSize:'small'}}>Choose way of signing up</p>
           </div>
         </div>
+        <div onClick={()=>{handleClick('SIGNUP_MANUELY')}} for ='eSignet'  className='eSignetButton' style={{backgroundColor:'#F9F9F9', fontWeight:'normal', margin:'10px 20px',padding:'10px',textDecoration:'underline'}} >
+                 Create account manually
+        </div>
         <div onClick={()=>{handleESignet1()}} for ='eSignet'  className='eSignetButton' style={{backgroundColor:'#F9F9F9', fontWeight:'normal', margin:'10px 20px'}} >
-                 <img src="assets/icons/eSignetIcon.png"  height="30" width="30"  alt=""/> Sign in with eSignet
+                 <img src="assets/icons/eSignetIcon.png"  height="30" width="30"  alt=""/> Sign up with eSignet
         </div>
         <div onClick={'#'} for ='eSignet'  className='eSignetButton' style={{backgroundColor:'#F9F9F9', fontWeight:'normal', margin:'10px 20px'}} >
-                 <img src="assets/icons/google_login.svg"  height="30" width="30"  alt=""/> Sign in with eSignet
+                 <img src="assets/icons/google_login.svg"  height="30" width="30"  alt=""/> Sign up with Google 
         </div>
        
       </div>
