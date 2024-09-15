@@ -71,7 +71,7 @@ const ChooseMethod = ({ setSignupMethod, boboxvalue }) => {
                  Create account manually
         </div>
         <div onClick={()=>{handleESignet1()}} for ='eSignet'  className='eSignetButton' style={{backgroundColor:'#F9F9F9', fontWeight:'normal', margin:'10px 20px'}} >
-                 <img src="assets/icons/eSignetIcon.png"  height="30" width="30"  alt=""/> Sign up with eSignet
+                 <img src="assets/icons/eSignetIcon.png"  height="30" width="30"  alt=""/> Sign up with eCard
         </div>
         <div onClick={'#'} for ='eSignet'  className='eSignetButton' style={{backgroundColor:'#F9F9F9', fontWeight:'normal', margin:'10px 20px'}} >
                  <img src="assets/icons/google_login.svg"  height="30" width="30"  alt=""/> Sign up with Google 
